@@ -1,0 +1,16 @@
+/* 
+ * Slider *
+ */
+
+.slider {
+  height: 1em;
+  color: $primary_color;
+  -barlevel-height: 0.3em;
+  -barlevel-background-color: $track_color;
+  -barlevel-border-color: transparent;
+  -barlevel-active-background-color: $primary_color;
+  -barlevel-active-border-color: transparent;
+  -barlevel-overdrive-color: $destructive_color;
+  -barlevel-border-width: 1px;
+  -slider-handle-radius: 6px; 
+}

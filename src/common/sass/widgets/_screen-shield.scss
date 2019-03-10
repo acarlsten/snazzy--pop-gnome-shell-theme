@@ -1,0 +1,96 @@
+/* 
+ * Screen Shield *
+ */
+
+.screen-shield-arrows {
+  padding-bottom: $huge_padding; 
+}
+
+.screen-shield-arrows Gjs_Arrow {
+  color: $inverse_secondary_fg_color;
+  width: 80px;
+  height: 48px;
+  -arrow-thickness: 12px;
+  -arrow-shadow: $text_shadow; 
+}
+
+.screen-shield-clock {
+  color: $inverse_fg_color;
+  text-shadow: $text_shadow;
+  font-weight: 200;
+  text-align: center;
+  padding-bottom: $standard_padding; 
+}
+
+.screen-shield-clock-time {
+  font-size: 144pt;
+  font-weight: 200;
+  text-shadow: $text_shadow; 
+}
+
+.screen-shield-clock-date {
+  font-size: 36pt;
+  font-weight: 300; 
+}
+
+.screen-shield-notifications-container {
+  spacing: 6px;
+  width: $screen_shield_notifications_size;
+  background-color: transparent;
+  max-height: 500px; 
+
+  .summary-notification-stack-scrollview {
+    padding-top: 0;
+    padding-bottom: 0; 
+  }
+  
+  .notification,
+  .screen-shield-notification-source {
+    padding: $standard_padding $tiny_padding;
+    background-color: rgba($inverse_bg_color, 0.5);
+    color: $inverse_fg_color;
+    border-radius: $pop_radius; 
+  }
+  
+  .notification {
+    margin-right: $standard_padding; 
+  }
+}
+
+.screen-shield-notification-label {
+  font-weight: 500;
+  padding: 0px 0px 0px $standard_padding;
+  text-shadow: $text_shadow; 
+}
+
+.screen-shield-notification-count-text {
+  padding: 0px 0px 0px $standard_padding; 
+  text-shadow: $text_shadow;
+}
+
+#panel.lock-screen {
+  background-color: rgba($panel_bg_color, 0.85); 
+}
+
+.screen-shield-background {
+  background: $inverse_bg_color;
+  box-shadow: $shadow_4; 
+}
+
+#lockDialogGroup {
+  background: $inverse_bg_color url("assets/noise-texture.svg");
+  background-repeat: repeat; 
+}
+
+#screenShieldNotifications StButton#vhandle, 
+#screenShieldNotifications StButton#hhandle {
+  background-color: rgba($inverse_bg_color, 0.3); 
+
+  &:hover, 
+  &:focus, 
+  &:hover, 
+  &:focus,
+  &:active {
+    background-color: rgba($inverse_bg_color, 0.5); 
+  }
+}

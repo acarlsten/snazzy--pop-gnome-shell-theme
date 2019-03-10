@@ -1,0 +1,50 @@
+/* 
+ * Dash *
+ */
+ 
+#dash {
+  font-size: 10pt;
+  color: $inverse_fg_color;
+  background-color: rgba($inverse_bg_color, 0.85);
+  border-radius: 0 $pop_radius $pop_radius 0; 
+
+  &:rtl {
+    border-radius: $pop_radius 0 0 $pop_radius;
+  }
+  
+  .placeholder {
+    background-image: url("assets/dash-placeholder.svg");
+    background-size: .5*$small_icon_size;
+    height: .5*$small_icon_size; 
+  }
+  
+  .empty-dash-drop-target {
+    width: 24px;
+    height: 24px; 
+  }
+
+  .dash-item-container {
+    padding-top: 1px;
+  }
+  
+  .app-well-app-running-dot {
+    width: $app_running_indicator_size*4;
+    height: $app_running_indicator_size/4;
+    background-color: $accent_color;
+    margin-top: $no_padding; 
+    border-radius: $pop_radius;
+  }
+}
+
+.dash-label {
+  border-radius: $pop_radius;
+  padding: $mini_padding $standard_padding;
+  color: $inverse_fg_color;
+  background-color: $inverse_bg_color;
+  text-align: center;
+  -x-offset: 8px; 
+}
+
+.show-apps {
+  padding: 8px;
+}

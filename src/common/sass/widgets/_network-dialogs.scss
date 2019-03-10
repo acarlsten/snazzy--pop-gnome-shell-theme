@@ -1,0 +1,81 @@
+/* 
+ * Network Dialogs *
+ */
+ 
+.nm-dialog {
+  max-height: $modal_size;
+  min-height: $modal_size+3em;
+  min-width: $modal_size; 
+}
+
+.nm-dialog-content {
+  spacing: 20px;
+  padding: 24px; 
+}
+
+.nm-dialog-header-hbox {
+  spacing: 10px; 
+}
+
+.nm-dialog-airplane-box {
+  spacing: 12px; 
+}
+
+.nm-dialog-airplane-headline {
+  font-size: 14pt;
+  font-weight: 300;
+  text-align: center; 
+}
+
+.nm-dialog-airplane-text {
+  color: $fg_color; 
+}
+
+.nm-dialog-header-icon {
+  icon-size: $large_icon_size;
+  padding-right: $standard_padding;
+  
+  &:rtl { 
+    padding-left: $standard_padding;
+    padding-right: 0;
+  } 
+}
+
+.nm-dialog-scroll-view {
+  background-color: $base_color;
+  border: $border_size solid $border_color; 
+}
+
+.nm-dialog-header {
+  color: $fg_color;
+  font-size: 14pt;
+  font-weight: 300; 
+}
+
+.nm-dialog-item {
+  font-size: 100%;
+  border-bottom: $border_size solid $border_color;
+  padding: $tiny_padding;
+  spacing: 20px; 
+
+  &:selected {
+    background-color: $primary_color;
+    color: $inverse_fg_color; 
+  }
+}
+
+.nm-dialog-icons {
+  spacing: .5em; 
+}
+
+.nm-dialog-icon {
+  icon-size: $small_icon_size+4px; 
+}
+
+.no-networks-label {
+  color: $fg_color;
+}
+
+.no-networks-box {
+  spacing: 12px; 
+}

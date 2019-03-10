@@ -1,0 +1,11 @@
+/* 
+ * links *
+ */
+ 
+.shell-link {
+  color: $link_color; 
+  
+  .shell-link:hover {
+    color: lighten($link_color, 10%); 
+  }
+}

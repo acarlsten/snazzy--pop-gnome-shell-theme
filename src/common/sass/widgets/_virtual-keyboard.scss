@@ -1,0 +1,87 @@
+/* 
+ * On-screen Keyboard * 
+ */
+ 
+.word-suggestions {
+  font-size: 14pt;
+  spacing: 12px;
+  min-height: 20pt; 
+}
+
+#keyboard {
+  background-color: $keyboard_bg_color; 
+}
+
+.key-container {
+  padding: 4px;
+  spacing: 4px; 
+}
+
+.keyboard-key {
+  background-color: $keyboard_key_bg;
+  min-height: 2em;
+  min-width: 2em;
+  font-size: 16pt;
+  border-radius: $pop_radius;
+  color: $keyboard_fg_color; 
+}
+  .keyboard-key:focus {
+    color: $keyboard_focus_fg_color;
+    box-shadow: $shadow_2; 
+  }
+  
+  .keyboard-key:hover, .keyboard-key:checked {
+    color: $keyboard_focus_fg_color;
+    box-shadow: $shadow_3;
+  }
+  
+  .keyboard-key:active {
+    color: $keyboard_focus_fg_color;
+    background-color: $keyboard_key_active_color;
+    box-shadow: $shadow_4;
+  }
+  
+  .keyboard-key:grayed {
+    background-color: rgba($keyboard_key_bg, 0.85);
+    color: rgba($keyboard_fg_color, 0.5);
+  }
+  
+  .keyboard-key.default-key {
+    background-color: $keyboard_key_default;
+    background-size: 20px; 
+  }
+  .keyboard-key.enter-key {
+    background-color: $keyboard_key_enter;
+    background-image: url("resource:///org/gnome/shell/theme/key-enter.svg"); 
+  }
+  
+  .keyboard-key.shift-key-lowercase {
+    background-image: url("resource:///org/gnome/shell/theme/key-shift.svg"); 
+  }
+  
+  .keyboard-key.shift-key-uppercase {
+    background-image: url("resource:///org/gnome/shell/theme/key-shift-uppercase.svg"); 
+  }
+  
+  .keyboard-key.shift-key-uppercase:latched {
+    background-image: url("resource:///org/gnome/shell/theme/key-shift-latched-uppercase.svg"); 
+  }
+  
+  .keyboard-key.hide-key {
+    background-image: url("resource:///org/gnome/shell/theme/key-hide.svg"); 
+  }
+  
+  .keyboard-key.layout-key {
+    background-image: url("resource:///org/gnome/shell/theme/key-layout.svg"); 
+  }
+
+.keyboard-subkeys {
+  color: white;
+  -arrow-border-radius: 10px;
+  -arrow-background-color: rgba(46, 52, 54, 0.7);
+  -arrow-border-width: 2px;
+  -arrow-border-color: rgba(238, 238, 236, 0.2);
+  -arrow-base: 20px;
+  -arrow-rise: 10px;
+  -boxpointer-gap: 5px; }
+

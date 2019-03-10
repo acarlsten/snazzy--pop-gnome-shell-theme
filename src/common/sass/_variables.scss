@@ -1,0 +1,134 @@
+/***************************
+ * Pop!_GNOME+ Version 4.0.2 *
+ ***************************/
+
+// Fonts
+$font-family: Sailec, Fira Sans, Cantarell, Sans-Serif;
+$large-font-family: Sailec, Fira Sans, 'M+ 1c', Cantarell, Sans-Serif;
+$root-font-size: if($compact == 'false', 14px, 13px);
+$subheading-size: if($compact == 'false', 16px, 15px);
+
+// Base-sizes
+$mini_size: if($compact == 'false', 4px, 2px);
+$tiny_size: if($compact == 'false', 12px, 10px);
+$small_size: if($compact == 'false', 16px, 14px);
+$medium_size: if($compact == 'false', 24px, 20px);
+$large_size: if($compact == 'false', 32px, 28px);
+
+// Widgets - Define widget sizes here, and
+// define custom sizes as derivative of these
+
+$small_icon_size: 12px;
+$standard_icon_size: 24px;
+$large_icon_size: 48px;
+
+$border_size: 1px;
+$line_size: 2px;
+$entry_size: 20em;
+$button_size: $medium_size;
+$menuitem_size: $small_size;
+$checkbox_size: $medium_size;
+$switch_size: 24px;
+$slider_size: if($compact == 'false', 2em, 1.5em);
+
+//Activities
+$search_results_size: 1200px;
+
+//App Grid
+$favorite_all_size: if($compact == 'false', 45em, 40em);
+$app_running_indicator_size: 4px;
+$workspace_thumnail_size: 200px;
+
+//App Switcher
+$window_thumnail_size: 300px;
+
+//Auth Dialogs
+$login_banner_size: $medium_size;
+$login_userlist_size: 30em;
+
+//Calendar
+$day_size: 2.4em;
+
+//Checkboxes
+$scrollbar_size: 14px;
+
+//Message List
+$message_list_size: 32em;
+
+//Modal Dialogs
+$modal_size: 37em;
+
+//Notifications
+$notification_size: 40em;
+$notify_count_size: 1.6em;
+
+//OSD
+$osd_size: $large_size * 2;
+$osd_bar_size: 0.3em;
+
+//Panel
+$panel_size: $large_size;
+
+//Popover/Menu
+$popup_size: 15em;
+$popup_ornament_size: 1.2em;
+
+//Screen Shield
+$screen_shield_notifications_size: 30em;
+
+// Padding
+$no_padding: 1px;
+$mini_padding: 2px;
+$tiny_padding: if($compact == 'false', 6px, 4px);
+$small_padding: if($compact == 'false', 8px, 6px);
+$standard_padding: if($compact == 'false', 12px, 10px);
+$large_padding: if($compact == 'false', 16px, 12px);
+$huge_padding: if($compact == 'false', 20px, 16px);
+
+// Widget paddings - Try to use Sparingly.
+$submenu_padding: if($compact == 'false', 26px, 22px);
+$user_icon_padding: if($compact == 'false', 3px, 2px);
+
+// Radii and other curves
+$pop_radius: 4px;
+$shortcut_key_radius: 3px;
+$circular_radius: 9999px;
+$panel_corner_radius: 4px;
+
+// opacities
+$higher_opacity: 0.9;
+$middle_opacity: 0.6;
+$lower_opacity: 0.3;
+
+// durations
+$shorter_duration: 180ms;
+$longer_duration: 270ms;
+$ripple_duration: 450ms;
+
+// timing functions
+$standard_curve: cubic-bezier(0.4, 0, 0.2, 1);
+$deceleration_curve: cubic-bezier(0, 0, 0.2, 1);
+$acceleration_curve: cubic-bezier(0.4, 0, 1, 1);
+$sharp_curve: cubic-bezier(0.4, 0, 0.6, 1);
+
+// transition shorthands
+$shorter_transition: all $shorter_duration $standard_curve;
+$longer_transition: all $longer_duration $standard_curve;
+$shadow_transition: box-shadow $shorter_duration $standard_curve;
+$menu_transition: all 0.1s $sharp_curve;
+
+// shadows
+// based shadow values:
+// https://material-design.storage.googleapis.com/images/layout-principles-dimensionality-shadows-08_large_mdpi.png
+
+// box-shadow 1px blur doesn't draw correctly, see
+// https://bugzilla.gnome.org/show_bug.cgi?id=738484
+// $shadow_1: 0 1px 1.5px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+$shadow_0: 0 1px 2px rgba(0, 0, 0, 0.08);
+$shadow_1: 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow_2: 0 3px 3px rgba(0, 0, 0, 0.23);
+$shadow_3: 0 6px 3px rgba(0, 0, 0, 0.23);
+$shadow_4: 0 10px 5px rgba(0, 0, 0, 0.22);
+$shadow_5: 0 15px 6px rgba(0, 0, 0, 0.22);
+
+$text_shadow: 0 1px 5px rgba(0, 0, 0, 0.6);

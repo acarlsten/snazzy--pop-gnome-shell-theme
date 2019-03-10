@@ -1,0 +1,190 @@
+/* 
+* Auth Dialogs *
+*/
+
+.framed-user-icon {
+  background-size: contain;
+  border: 0 solid rgba($inverse_fg_color, 0.25);
+  color: rgba($inverse_fg_color, 0.7);
+  border-radius: $circular_radius; 
+  margin-right: $large_padding;
+  
+  &:hover {
+    border-color: white;
+    color: white; 
+  }
+}
+
+.login-dialog-banner-view {
+  padding-top: $huge_padding;
+  max-width: $login_banner_size; 
+}
+
+.login-dialog {
+  border: none;
+  background-color: transparent; 
+  
+  StEntry {
+    @include entry(normal, $text_color: $inverse_fg_color);
+    padding: $small_padding $standard_padding;
+    selection-background-color: $primary_color;
+    selected-color: $inverse_fg_color;
+    min-height: $medium_size;
+    
+    &:focus { 
+      @include entry(focus, $text_color: $inverse_fg_color); 
+    }
+    
+    &:insensitive { 
+      @include entry(insensitive, $text_color: $inverse_secondary_fg_color);
+      color: $inverse_fg_color; 
+      padding: $small_padding $standard_padding;
+    }
+  }
+  
+  .modal-dialog-button-box {
+    spacing: $tiny_padding; 
+  }
+  
+  .modal-dialog-button {
+    padding: $tiny_padding $huge_padding; 
+    @include button(flat-normal, $text_color: $inverse_fg_color);
+    
+    &:hover, 
+    &:focus { @include button(flat-hover, $text_color: $inverse_fg_color); }
+    
+    &:active { @include button(flat-active, $text_color: $inverse_fg_color); }
+    
+    &:insensitive { @include button(flat-insensitive, 
+                                    $text_color: $inverse_fg_color); }
+    
+    &:default {
+      @include button(normal, 
+                      $base_color: $suggested_color, 
+                      $text_color: $inverse_fg_color);
+      
+      &:hover,
+      &:focus { @include button(hover, 
+                                $base_color: $suggested_color, 
+                                $text_color: $inverse_fg_color); }
+      
+      &:active { @include button(active, 
+                                 $base_color: $suggested_color, 
+                                 $text_color: $inverse_fg_color); }
+      
+      &:insensitive { @include button(insensitive, 
+                                      $base_color: $suggested_color, 
+                                      $text_color: $inverse_fg_color); }
+    }
+  }
+}
+
+.login-dialog-logo-bin {
+  padding: $huge_padding $no_padding; 
+}
+
+.login-dialog-banner {
+  color: $inverse_secondary_fg_color; 
+}
+
+.login-dialog-button-box {
+  spacing: $small_padding; 
+}
+
+.login-dialog-message-warning {
+  color: $warning_color; 
+}
+
+.login-dialog-message-hint {
+  padding-top: $no_padding;
+  padding-bottom: $huge_padding; 
+}
+
+.login-dialog-user-selection-box {
+  padding: 100px 0px; 
+}
+
+.login-dialog-not-listed-label {
+  padding-left: $tiny_padding; 
+  .login-dialog-not-listed-button:focus &,
+  .login-dialog-not-listed-button:hover & {
+    color: $inverse_secondary_fg_color;
+  }
+  
+  font-size: 90%;
+  font-weight: 400;
+  color: $inverse_secondary_fg_color;
+  padding-top: $standard_padding;
+}
+
+.login-dialog-user-list-view {
+  -st-vfade-offset: $standard_padding; 
+}
+
+.login-dialog-user-list {
+  spacing: $standard_padding;
+  padding: $tiny_padding;
+  width: $login_userlist_size; 
+  
+  &:expanded .login-dialog-user-list-item:selected {
+    background-color: rgba($inverse_fg_color, 0.15);
+    color: $inverse_fg_color;
+  }
+  
+  &:expanded .login-dialog-user-list-item:logged-in {
+    border-right: $line_size solid $accent_color; 
+  }
+}
+
+.login-dialog-user-list-item {
+  border-radius: $pop_radius;
+  padding: $standard_padding;
+  color: $inverse_secondary_fg_color; 
+
+  .login-dialog-timed-login-indicator {
+    height: $line_size;
+    margin: $mini_padding 0 0 0;
+    background-color: $primary_color; 
+  }
+  
+  &:focus .login-dialog-timed-login-indicator {
+    background-color: $inverse_fg_color; 
+  }
+}
+
+.login-dialog-username,
+.user-widget-label {
+  color: $inverse_fg_color;
+  font-size: 2em;
+  font-weight: 300;
+  text-align: left;
+  padding-left: $small_padding;
+  padding-right: $small_padding; 
+}
+
+.login-dialog-prompt-layout {
+  padding-top: $huge_padding;
+  padding-bottom: $standard_padding;
+  spacing: $small_padding;
+  width: $login_userlist_size;
+}
+
+.login-dialog-prompt-label {
+  color: $inverse_secondary_fg_color;
+  font-size: 110%;
+  font_weight: 400;
+  padding-top: $standard_padding; 
+}
+
+.login-dialog-session-list-button StIcon {
+  icon-size: 1.25em; 
+}
+
+.login-dialog-session-list-button {
+  color: $inverse_secondary_fg_color; 
+  
+  &:hover,
+  &:focus { color: $inverse_fg_color; }
+  
+  &:active { color: $inverse_fg_color; }
+}

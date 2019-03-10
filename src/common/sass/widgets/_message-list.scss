@@ -1,0 +1,102 @@
+/* 
+ * Message list *
+ */
+ 
+.message-list {
+  width: $message_list_size; 
+}
+
+.message-list-clear-button.button {
+  background-color: transparent;
+  margin: $large_padding $large_padding 0; 
+  padding: $small_padding
+  
+  &:hover,
+  &:focus {
+    background-color: $track_color; 
+  }
+}
+
+.message-list-sections {
+  spacing: $standard_padding; 
+}
+
+.message-list-section,
+.message-list-section-list {
+  spacing: $standard_padding; 
+}
+
+.message {
+  border-radius: $pop_radius; 
+  &:hover, 
+  &:focus {
+    background-color: $track_color; 
+  }
+}
+
+.message-icon-bin {
+  padding: 0.68em 0.2em 0.68em 0.68em; 
+  &:rtl {
+    padding: 0.68em 0.68em 0.68em 0.2em; 
+  }
+}
+
+.message-icon-bin > StIcon {
+  color: $fg_color;
+  icon-size: 8px+$standard_icon_size;
+  -st-icon-style: symbolic; 
+  padding-top: 4px;
+}
+
+.message-secondary-bin {
+  padding: 0 0.82em; 
+}
+
+.message-secondary-bin > .event-time {
+  color: $secondary_fg_color;
+  font-size: 0.85em;
+  /* HACK: the label should be baseline-aligned with a 1em label,
+                     fake this with some bottom padding */
+  padding-bottom: 0.6em; 
+}
+
+.message-secondary-bin > StIcon {
+  icon-size: 1.09em; 
+}
+
+.message-title {
+  color: darken($fg_color, 5%); 
+  padding: 0 0 $mini_padding 0; 
+  margin: 0 0 $mini_padding 0; 
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.message-content {
+  color: $fg_color;
+  padding: $small_padding; 
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.message-media-control {
+  padding: $standard_padding;
+  color: $secondary_fg_color; 
+  &:last-child:ltr { padding-right: 18px; }
+  &:last-child:rtl { padding-left: 18px; }
+  
+  &:hover { color: $fg_color; }
+  
+  &:insensitive { color: $disabled_fg_color; }
+}
+
+.media-message-cover-icon {
+  icon-size: $large_icon_size !important; 
+  .media-message-cover-icon.fallback {
+    color: $track_color;
+    background-color: $secondary_fg_color;
+    border-radius: $pop_radius;
+    icon-size: $standard_icon_size;
+    padding: $small_padding; 
+  }
+}

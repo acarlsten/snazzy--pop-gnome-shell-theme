@@ -1,0 +1,147 @@
+/*
+ * Overview *
+ */
+
+#overview {
+  spacing: $standard_padding * 2;
+}
+
+.overview-controls {
+  padding-bottom: $large_padding * 2;
+}
+
+.window-picker {
+  -horizontal-spacing: $large_padding;
+  -vertical-spacing: $large_padding;
+  padding: 0 $large_padding $large_padding;
+  
+  &.external-monitor { padding: $large_padding; }
+}
+
+.window-clone-border {
+  border: $border_size*2 solid $primary_color;
+  border-radius: $pop_radius;
+}
+
+.window-caption {
+  spacing: $large_padding;
+  color: $inverse_fg_color;
+  background-color: $inverse_bg_color;
+  border-radius: $pop_radius;
+  padding: $tiny_padding $standard_padding;
+}
+
+.search-entry {
+  width: $entry_size;
+  padding: $small_padding $standard_padding;
+  border-radius: 0;
+  color: rgba($inverse_fg_color, 0.85) !important;
+  @include entry(normal, $bg_color);
+  background-color: rgba(white, 0.01); //needed to show box-shadow.
+  &:focus { 
+    @include entry(focus, $bg_color);
+    background-color: rgba(white, 0.01);
+  }
+  
+  .search-entry-icon {
+    icon-size: 4px+$small_icon_size;
+    padding: 0 $tiny_padding;
+    color: $inverse_fg_color; 
+  }
+}
+
+#searchResultsBin {
+  max-width: $search_results_size; 
+}
+
+#searchResultsContent {
+  padding-left: $huge_padding;
+  padding-right: $huge_padding;
+  spacing: $large_padding; 
+}
+
+.search-section {
+  spacing: $large_padding; 
+}
+
+.search-section-content {
+  spacing: $large_padding * 2; 
+}
+
+.list-search-results {
+  spacing: $mini_padding; 
+}
+
+.search-section-separator {
+  height: $border_size;
+  background-color: rgba($inverse_fg_color, 0.25); 
+}
+
+.list-search-result-content {
+  spacing: $large_padding * 2; 
+}
+
+.list-search-result-title {
+  color: $inverse_fg_color;
+  spacing: $standard_padding; 
+}
+
+.list-search-result-description {
+  color: $inverse_secondary_fg_color; 
+}
+
+.list-search-provider-details {
+  width: 150px;
+  color: $inverse_secondary_fg_color;
+  margin-top: $mini_padding; 
+}
+
+.list-search-provider-content {
+  spacing: $huge_padding; 
+}
+
+.search-provider-icon {
+  padding: $standard_padding; 
+}
+
+.page-indicator {
+  margin: $standard_padding $large_padding; 
+  width: $scrollbar_size;
+  height: $scrollbar_size;
+  background-color: transparent;
+  border: $line_size solid $inverse_fg_color;
+  border-radius: $circular_radius;
+  
+  &:hover {
+    background-color: mix($inverse_fg_color, $accent_color, 25%);
+    border: $line_size solid $inverse_fg_color;
+  }
+  
+  &:active,
+  &:checked {
+    background-color:$accent_color;
+    border: $line_size solid $accent_color;
+  } 
+}
+
+.workspace-thumbnails {
+  color: $inverse_fg_color;
+  background-color: transparent !important;
+  border: $line_size solid transparent;
+  visible-width: $workspace_thumnail_size;
+  spacing: $standard_padding;
+  padding: $standard_padding;
+  
+  .placeholder {
+    background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
+    background-size: contain;
+    height: 24px; 
+  }
+}
+
+.workspace-thumbnail-indicator {
+  border: 0 solid $accent_color;
+  border-left-width: $line_size; 
+  padding: $standard_padding;
+  border-radius: 0;
+}

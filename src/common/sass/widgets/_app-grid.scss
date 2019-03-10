@@ -1,0 +1,162 @@
+/* 
+ * App Vault/Grid *
+ */
+ 
+.icon-grid {
+  spacing: $large_padding*2;
+  -shell-grid-horizontal-item-size: 136px;
+  -shell-grid-vertical-item-size: 136px; 
+}
+
+.overview-icon { icon-size: $large_icon_size*2; }
+
+.system-action-icon {
+  margin: 8px 0 $tiny_padding;
+  background-color: $inverse_bg_color;
+  color: $white;
+  border-radius: $circular_radius;
+  icon-size: $large_icon_size; 
+}
+
+.overview-icon-with-label StLabel {
+  color: $inverse_fg_color;
+}
+
+.overview-icon-with-label {
+  text-align: center;
+}
+
+.app-view-controls {
+  width: $favorite_all_size;
+  padding-bottom: $huge_padding*2;
+}
+.app-view-control { 
+  padding: $tiny_padding $standard_padding;
+  font-weight: bold;
+  color: $inverse_secondary_fg_color;
+  border-radius:$pop_radius;
+  &:hover {
+    color: $inverse_fg_color;
+    background-color: $inverse_divider_color !important;
+  }
+  &:active {
+    color: $inverse_fg_color;
+    background-color: $inverse_track_color !important;
+  }
+  &:checked {
+    color: $inverse_fg_color;
+    background-color: rgba($bg_color, 0.01) !important;
+    box-shadow: inset 0 $line_size 0 $accent_color;
+    border-radius: 0;
+  }
+}
+
+.search-provider-icon,
+.list-search-result {
+  color: $inverse_fg_color;
+  border-radius: $pop_radius;
+  padding: $small_padding;
+  border: none;
+  text-align: center;
+
+  &:active,
+  &:checked { background-color: rgba($inverse_fg_color, 0.25); }
+  
+  &:focus,
+  &:selected,
+  &:hover { background-color: rgba($inverse_fg_color, 0.15); }
+}
+
+.app-well-app,
+.app-well-app.app-folder
+.grid-search-result {
+  .overview-icon {
+    color: $inverse_fg_color;
+    border-radius: $pop_radius;
+    padding: $small_padding;
+    border: none;
+    text-align: center;
+    
+    &.overview-icon-with-label{
+      spacing: $tiny_padding;
+    }
+  }
+  
+  &:active 
+  &:checked {
+    .overview-icon { background-color: rgba($inverse_fg_color, 0.25); }
+  }
+  
+  &:hover,
+  &:focus,
+  &:selected {
+    .overview-icon { background-color: rgba($inverse_fg_color, 0.15); }
+  }
+}
+
+.show-apps-icon {
+  color: $inverse_secondary_fg_color;
+  
+  &:hover,
+  &:focus,
+  &:selected,
+  &:checked,
+  &:active {
+    color: $inverse_fg_color;
+  }
+}
+
+.app-well-app-running-dot {
+  width: $app_running_indicator_size*4;
+  height: $app_running_indicator_size;
+  background-color: $accent_color;
+  margin-top: $small_padding; 
+  border-radius: $pop_radius;
+}
+
+.app-well-app.app-folder 
+  > .overview-icon {
+  background-color: rgba($inverse_bg_color, 0.25);
+  border: $border_size solid rgba($inverse_fg_color, 0.25);
+  border-radius: $pop_radius*3;
+}
+
+.show-apps:checked .show-apps-icon,
+.show-apps:focus .show-apps-icon {
+  color: white;
+}
+
+//These apply to the whole popup, not just the arrow
+.app-folder-popup {
+  -arrow-border-radius: $pop_radius*3;
+  -arrow-background-color: transparent;
+  -arrow-border-color: rgba($inverse_fg_color, 0.25);
+  -arrow-base: 0;
+  -arrow-rise: 4px;
+  border: $border_size solid rgba($inverse_fg_color, 0.25); 
+  border-radius: $pop_radius*3;
+  background-color: rgba($inverse_bg_color, 0.25);
+  margin: 4px;
+}
+
+.app-folder-popup-bin {
+  padding: $small_padding; 
+}
+
+.app-folder-icon {
+  padding: $small_padding;
+  spacing-rows: $small_padding;
+  spacing-columns: $small_padding; 
+}
+
+.search-display > StBoxLayout,
+.all-apps,
+.frequent-apps > StBoxLayout {
+  padding: 0px 88px 10px 88px; 
+}
+
+.search-statustext, .no-frequent-applications-label {
+  font-size: 3em;
+  font-weight: 300;
+  color: rgba($inverse_fg_color, 0.85); 
+}

@@ -1,0 +1,198 @@
+/* GSConnect */
+// Need to remvoe padding on GSconnect's first child. Otherwise the icons appear
+// stretched. See https://github.com/andyholmes/gnome-shell-extension-gsconnect/issues/44
+
+.aggregate-menu .popup-sub-menu .gsconnect-device-box {
+  padding: 0.5em 1em;
+  spacing: 0.5em;
+  
+  :first-child {
+    padding: 0;
+    margin: 0;
+  }  
+
+  .gsconnect-device-button {
+    border: none;
+    border-radius: $circular_radius;
+    padding: 0px;
+    
+    &:hover,
+    &:focus {
+      border: none;
+      border-radius: $circular_radius;
+      padding: 0px;
+    }
+  }
+  
+  .gsconnect-control-box {
+    spacing: 0.25em;
+  
+  
+    .gsconnect-title-bar {
+      spacing: 0.75em;
+    
+      .gsconnect-device-name {
+        color: $fg_color;
+        padding-bottom: $small_padding;
+      }
+      
+      .gsconnect-title-separator {
+        background-color: $secondary_fg_color;
+      }
+      
+      .gsconnect-device-battery {
+        spacing: 3px;
+      }
+    }
+    .gsconnect-plugin-bar {
+  
+      .gsconnect-plugin-button {
+        color: $fg_color;
+        border: none;
+        border-radius: $circular_radius;
+        padding: 8px;
+      }
+    }
+    .gsconnect-status-bar {
+    }
+  }
+}
+
+
+
+/**
+ * Account for a patch that landed in gnome-shell-3.28.0 that clobbered all
+ * :first-child descendants with margin/padding changes.
+ * https://gitlab.gnome.org/GNOME/gnome-shell/commit/fb9db4e171778a63bd85ac6fde15b7acfdede2c2
+ */
+.aggregate-menu .popup-sub-menu .gsconnect-device-box :first-child {
+    padding: 0;
+    margin: 0;
+}
+
+.aggregate-menu .popup-sub-menu .gsconnect-plugin-button:first-child {
+    border: none;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+/* Tooltip
+StBin.gsconnect-tooltip (inherits from .osd-window)
+    StBoxLayout || [ Custom ClutterActor ]
+        StIcon.gsconnect-tooltip-icon
+        StLabel.gsconnect-tooltip-text
+*/
+.gsconnect-tooltip {
+    border-radius: 3px;
+    min-width: 0;
+    min-height: 0;
+    padding: 6px;
+}
+
+.gsconnect-tooltip > StBoxLayout {
+    spacing: 6px;
+}
+
+.gsconnect-tooltip-icon {
+}
+
+.gsconnect-tooltip-text {
+    font-weight: normal;
+    text-align: left;
+}
+
+.gsconnect-tooltip-text:rtl {
+    text-align: right;
+}
+
+
+/* Dash to Dock */
+
+#dashtodockContainer #dash {
+  background-color: rgba($panel_bg_color, 0.85);
+}
+
+#dashtodockContainer:overview #dash {
+  background-color: rgba($panel_bg_color, 0.85);
+}
+
+#dashtodockContainer.extended:overview #dash {
+  background-color: transparent;
+}
+
+#dashtodockContainer .app-well-app-running-dot {
+  background-color: transparent;
+}
+
+#dashtodockContainer .dash-item-container {
+  padding: 0; // Need to set 0 to prevent off-center icons. 'none' doesn't work
+  
+  > StWidget {
+    background-size: cover;
+  }
+}
+
+@each $p, $pt in ('.left', 'left'),
+                 ('.right', 'right'),
+                 ('.top', 'top'),
+                 ('.bottom', 'bottom') {
+  @each $n, $nb in ('.running1', 'running1'),
+                   ('.running2', 'running2'),
+                   ('.running3', 'running3'),
+                   ('.running4', 'running4') {
+    @each $f, $fc in ('', ''),
+                     ('.focused', '-focused') {
+      #dashtodockContainer#{$p} .dash-item-container > StWidget#{$n}#{$f} {
+        background-image: url("assets/dash/#{$pt}-#{$nb}#{$fc}.svg");
+      }
+    }
+  }
+}
+
+
+/* Simple Dock */
+
+#dash:desktop {
+  background-color: $bg_color;
+}
+
+
+/* GPaste */
+
+.popup-menu {
+  .search-entry {
+    color: $fg_color;
+    selection-background-color: $primary_color;
+    selected-color: $inverse_fg_color;
+    @include entry(normal);
+
+    &:focus {
+      @include entry(focus);
+      color: $fg_color;
+    }
+
+    .search-entry-icon { color: $hint_fg_color; }
+
+    &:hover, &:focus {
+      .search-entry-icon { color: $fg_color; }
+    }
+  }
+}
+
+/*****************
+ * GNOME Classic *
+ *****************/
+
+#panel.bottom-panel {
+  &, &.solid {
+    height: 32px; // = 1.875em
+    border-top-width: 1px;
+    border-bottom-width: 0;
+    border-color: $panel_bg_color;
+    background-color: $panel_bg_color;
+    background-gradient-drection: vertical;
+    background-gradient-start: $panel_bg_color;
+    background-gradient-end: $panel_bg_color;
+    color: $fg_color;
+  }
+}
