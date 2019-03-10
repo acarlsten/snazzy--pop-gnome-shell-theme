@@ -1,9 +1,3 @@
-<p align="center">
-<img src="https://github.com/system76/pop-gtk-theme/raw/master/Pop_gtk-logo.png"/>
-</p>
-
----
-
 ## The Pop GNOME Shell theme. -- Snazzy version
 
 This is the GNOME Shell theme that goes along with the [Pop GTK Theme](https://github.com/pop-os/gtk-theme).
