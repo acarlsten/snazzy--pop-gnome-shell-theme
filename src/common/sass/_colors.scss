@@ -97,7 +97,7 @@ $inactive_titlebar_bg_color: if(
   fade($brown_300)
 );
 $alt_titlebar_bg_color: if($titlebar == 'dark', $brown_800, mix($brown_300, $brown_400, 50%));
-$panel_bg_color: $warm_gray; //DEFAULT darken($brown_800, 3%)
+$panel_bg_color: #191a21; //DEFAULT darken($brown_800, 3%)
 $unity_panel_bg_color: if($titlebar == 'dark', $brown_900, mix($grey_300, $grey_400, 50%));
 $alt_panel_bg_color: rgba($black, $lower_opacity);
 
@@ -108,7 +108,7 @@ $row_fill_color: gtkalpha(currentColor, 0.05);
 // Misc colors
 $primary_color: $blue_500;
 $alt_primary_color: $blue_300;
-$accent_color: $orange_500;
+$accent_color: $orange;
 $disabled_accent_color: rgba($accent_color, 0.5);
 
 $keyboard_fg_color: rgba($white, 0.7);
