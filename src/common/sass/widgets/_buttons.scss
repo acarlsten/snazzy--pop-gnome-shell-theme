@@ -1,7 +1,7 @@
 /*
  * Buttons *
  */
- 
+
 .button {
   min-height: $button_size;
   padding: 0 $large_padding;
@@ -9,11 +9,18 @@
   border-radius: $pop_radius;
   @include font(button);
   @include button(flat-normal);
-  &:hover { @include button(flat-hover); }
-  &:active { @include button(flat-active); }
-  &:insensitive { @include button(flat-insensitive); }
-  &:focus { @include button(flat-focus); }
-
+  &:hover {
+    @include button(flat-hover);
+  }
+  &:active {
+    @include button(flat-active);
+  }
+  &:insensitive {
+    @include button(flat-insensitive);
+  }
+  &:focus {
+    @include button(flat-focus);
+  }
 }
 
 .modal-dialog-linked-button {
@@ -24,32 +31,32 @@
   @include button(flat-normal);
   background-color: $base_color;
   color: $fg_color;
-  
-  &:focus { 
+
+  &:focus {
     @include button(flat-focus);
     background-color: $base_color;
-    color: $color_theme_2;
+    color: $orange; //$color_theme_2
   }
-  
-  &:hover { 
+
+  &:hover {
     @include button(flat-hover);
-    background-color: to100($color_theme_2);
-    
+    background-color: to100($orange);
+
     &:focus {
-      color: $color_theme_2;
+      color: $orange; //$color_theme_2 really everywhere it says orange now
     }
   }
-  
-  &:active { 
+
+  &:active {
     @include button(flat-active);
-    background-color: to200($color_theme_2);
-    
+    background-color: to200($orange);
+
     &:focus {
-      color: $color_theme_2;
+      color: $orange;
     }
   }
-  
-  &:insensitive { 
+
+  &:insensitive {
     @include button(flat-insensitive);
   }
 
