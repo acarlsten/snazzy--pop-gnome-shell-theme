@@ -131,20 +131,20 @@ $indigo_A400: #3d5afe;
 $indigo_A700: #304ffe;
 
 // Blue
-$blue_50: lighten(#48b9c7, 90%);
-$blue_100: lighten(#48b9c7, 80%);
-$blue_200: lighten(#48b9c7, 60%);
-$blue_300: lighten(#48b9c7, 40%);
-$blue_400: lighten(#48b9c7, 20%);
-$blue_500: #48b9c7;
-$blue_600: darken(#48b9c7, 20%);
-$blue_700: darken(#48b9c7, 40%);
-$blue_800: darken(#48b9c7, 60%);
-$blue_900: darken(#48b9c7, 80%);
-$blue_A100: lighten(#48b9c7, 50%);
-$blue_A200: #48b9c7;
-$blue_A400: darken(#48b9c7, 15%);
-$blue_A700: darken(#48b9c7, 75%);
+$blue_50: lighten($blue, 90%);
+$blue_100: lighten($blue, 80%);
+$blue_200: lighten($blue, 60%);
+$blue_300: lighten($blue, 40%);
+$blue_400: lighten($blue, 20%);
+$blue_500: $blue;
+$blue_600: darken($blue, 20%);
+$blue_700: darken($blue, 40%);
+$blue_800: darken($blue, 60%);
+$blue_900: darken($blue, 80%);
+$blue_A100: lighten($blue, 50%);
+$blue_A200: $blue;
+$blue_A400: darken($blue, 15%);
+$blue_A700: darken($blue, 75%);
 
 // Light Blue
 $light_blue_50: #e1f5fe;
@@ -275,20 +275,20 @@ $amber_A400: #ffc400;
 $amber_A700: #ffab00;
 
 // Orange
-$orange_50: lighten(#faa41a, 90%);
-$orange_100: lighten(#faa41a, 80%);
-$orange_200: lighten(#faa41a, 60%);
-$orange_300: lighten(#faa41a, 40%);
-$orange_400: lighten(#faa41a, 20%);
-$orange_500: #faa41a;
-$orange_600: darken(#faa41a, 20%);
-$orange_700: darken(#faa41a, 40%);
-$orange_800: darken(#faa41a, 60%);
-$orange_900: darken(#faa41a, 80%);
-$orange_A100: lighten(#faa41a, 50%);
-$orange_A200: #faa41a;
-$orange_A400: darken(#faa41a, 15%);
-$orange_A700: darken(#faa41a, 75%);
+$orange_50: lighten($yellow, 90%);
+$orange_100: lighten($yellow, 80%);
+$orange_200: lighten($yellow, 60%);
+$orange_300: lighten($yellow, 40%);
+$orange_400: lighten($yellow, 20%);
+$orange_500: $yellow;
+$orange_600: darken($yellow, 20%);
+$orange_700: darken($yellow, 40%);
+$orange_800: darken($yellow, 60%);
+$orange_900: darken($yellow, 80%);
+$orange_A100: lighten($yellow, 50%);
+$orange_A200: $yellow;
+$orange_A400: darken($yellow, 15%);
+$orange_A700: darken($yellow, 75%);
 
 // Deep Orange
 $deep_orange_50: #fbe9e7;
@@ -307,16 +307,16 @@ $deep_orange_A400: #ff3d00;
 $deep_orange_A700: #dd2c00;
 
 // Brown
-$brown_50: lighten(#574f4a, 97%);
-$brown_100: lighten(#574f4a, 90%);
-$brown_200: lighten(#574f4a, 75%);
-$brown_300: lighten(#574f4a, 60%);
-$brown_400: lighten(#574f4a, 45%);
-$brown_500: lighten(#574f4a, 30%);
-$brown_600: lighten(#574f4a, 15%);
-$brown_700: #574f4a;
-$brown_800: darken(#574f4a, 15%);
-$brown_900: darken(#574f4a, 30%);
+$brown_50: lighten($warm_gray, 97%);
+$brown_100: lighten($warm_gray, 90%);
+$brown_200: lighten($warm_gray, 75%);
+$brown_300: lighten($warm_gray, 60%);
+$brown_400: lighten($warm_gray, 45%);
+$brown_500: lighten($warm_gray, 30%);
+$brown_600: lighten($warm_gray, 15%);
+$brown_700: $warm_gray;
+$brown_800: darken($warm_gray, 15%);
+$brown_900: darken($warm_gray, 30%);
 
 // Grey
 $grey_50: #fafafa;
