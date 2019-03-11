@@ -19,12 +19,12 @@ clean:
 uninstall:
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
-	    rm -rf /usr/share/themes/Pop$$color$$size/gnome-shell \
-	           /usr/local/share/themesPop$$color$$size/gnome-shell; \
+	    rm -rf /usr/share/themes/Adam-pop$$color$$size/gnome-shell \
+	           /usr/local/share/themes/Adam-pop$$color$$size/gnome-shell; \
 	  done; \
 	done
 
-	-rm -rf /usr/share/gnome-shell/theme/pop.css
+	-rm -rf /usr/share/gnome-shell/theme/Adam-pop.css
 
 install:
 	@echo "** Installing the theme..."
@@ -32,7 +32,7 @@ install:
 	# Install GNOME Shell Theme
 	for color in $(COLOR_VARIANTS); do \
 	  for size in $(SIZE_VARIANTS); do \
-	    export themedir=$(DESTDIR)$(BASE_DIR)/Pop$$color$$size; \
+	    export themedir=$(DESTDIR)$(BASE_DIR)/Adam-pop$$color$$size; \
 	    install -d $$themedir/gnome-shell; \
 	    cd $(SRCDIR)/$(GNOMEVER); \
 	    cp -ur \
@@ -56,7 +56,7 @@ install:
 	      $$themedir/gnome-shell/gnome-shell.css; \
 	    cp -ur \
 	      gnome-shell$$color$$size.css \
-	      $$themedir/gnome-shell/pop.css; \
+	      $$themedir/gnome-shell/Adam-pop.css; \
 	    glib-compile-resources \
 	      --sourcedir=$$themedir/gnome-shell \
 	      --target=$$themedir/gnome-shell/gnome-shell-thememe.gresource \
@@ -64,9 +64,9 @@ install:
 	  done; \
 	done
 
-	install -D $(DESTDIR)/usr/share/themes/Pop/gnome-shell/pop.css \
-	           $(DESTDIR)/usr/share/gnome-shell/theme/pop.css
-	cp -r $(DESTDIR)/usr/share/themes/Pop/gnome-shell/assets \
+	install -D $(DESTDIR)/usr/share/themes/Adam-pop/gnome-shell/Adam-pop.css \
+	           $(DESTDIR)/usr/share/gnome-shell/theme/Adam-pop.css
+	cp -r $(DESTDIR)/usr/share/themes/Adam-pop/gnome-shell/assets \
 	      $(DESTDIR)/usr/share/gnome-shell/theme/
 
 recolor:

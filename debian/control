@@ -1,4 +1,4 @@
-Source: pop-gnome-shell-theme
+Source: Adam-pop-gnome-shell-theme
 Section: gnome
 Priority: optional
 Maintainer: Jeremy Soller <jeremy@system76.com>
@@ -21,7 +21,7 @@ Standards-Version: 3.9.8
 Homepage: https://github.com/system76/pop-gtk-theme
 
 
-Package: pop-gnome-shell-theme
+Package: Adam-pop-gnome-shell-theme
 Architecture: all
 Depends: gnome-shell-common, pop-gtk-theme
 Description: The Pop GNOME Shell theme, installed for GDM.

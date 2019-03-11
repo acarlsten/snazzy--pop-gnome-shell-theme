@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: pop-gtk-theme
+Upstream-Name: adam-pop-gtk-theme
 Source: https://github.com/system76/pop-gtk-theme
 
 Files: *
