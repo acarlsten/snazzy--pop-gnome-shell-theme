@@ -40,7 +40,7 @@
 
   &:hover {
     @include button(flat-hover);
-    background-color: to100($orange);
+    background-color: $disabled_secondary_fg_color; //to100($orange)
 
     &:focus {
       color: $orange; //$color_theme_2 really everywhere it says orange now

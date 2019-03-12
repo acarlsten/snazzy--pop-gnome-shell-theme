@@ -1,41 +1,41 @@
 /* 
  * App Switcher * 
  */
- 
+
 .switcher-popup {
   padding: $small_padding;
-  spacing: $large_padding; 
-  
+  spacing: $large_padding;
 }
 
 .switcher-list-item-container {
-  spacing: $large_padding; 
+  spacing: $large_padding;
 }
 
 .switcher-list {
-  
   .item-box {
     padding: $large_padding;
     border-radius: $pop_radius;
-    
+
     &:outlined {
       padding: $small_padding;
       border: $border_size solid $inverse_fg_color;
     }
-    
+
     &:selected {
       color: $inverse_bg_color;
-      background-color: $primary_color;
+      background-color: $accent_color;
     }
   }
-  
+
   .thumnail-box {
     padding: $small_padding;
     spacing: $tiny_padding;
   }
-  
-  .thumbnail { width: $window_thumnail_size; }
-  
+
+  .thumbnail {
+    width: $window_thumnail_size;
+  }
+
   .separator {
     width: $border_size;
     background-color: $border_color;
@@ -45,22 +45,22 @@
 .switcher-arrow {
   border-color: transparent;
   color: rgba($fg_color, 0.6);
-  
+
   &:highlighted {
-    color: rgba($fg_color, 0.8); 
+    color: rgba($fg_color, 0.8);
   }
 }
 
 .input-source-switcher-symbol {
   font-size: 34pt;
-  width: $large_icon_size*2;
-  height: $large_icon_size*2; 
+  width: $large_icon_size * 2;
+  height: $large_icon_size * 2;
 }
 
 /* 
  * Window Cycler *
  */
- 
+
 .cycler-highlight {
-  border: 5px solid $accent_color; 
+  border: 5px solid $accent_color;
 }
